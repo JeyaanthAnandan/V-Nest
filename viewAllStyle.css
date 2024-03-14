@@ -1,0 +1,457 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* margin-top: 0.5%; */
+
+}
+
+.bodyClass{
+    background-color:#f6f3ff
+}
+
+.header{
+    min-height: 31vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    /* background-color: purple; */
+    background-color: black;
+    
+}
+
+nav{
+     display: flex; 
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 100px;
+
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+    /* color: black; */
+    /* color: #fff; */
+     color: #f6f3ff;
+    font-size: 13px;
+    width: 85%;
+    float: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    /* color: black; */
+    /* color: #fff; */
+    color: #f6f3ff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    /* background: black; */
+    /* background: white; */
+    background: #f6f3ff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+.heading{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+body .container {
+  max-width: 1100px;
+}
+
+.container{
+    margin-bottom: 5%;
+}
+
+#filter-buttons button {
+  border-radius: 3px;
+  background: #fff;
+  border-color: transparent;
+}
+
+#filter-buttons button:hover {
+  background: #ddd;
+}
+
+#filter-buttons button.active {
+  color: #fff;
+  background-color: #ada0d3;
+}
+
+#filterable-cards .card {
+  width: 15rem;
+  border: 2px solid transparent;
+}
+
+#filterable-cards .card.hide {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #filterable-cards {
+    justify-content: center;
+  }
+
+  #filterable-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+footer{
+    background-color: black;
+}
+
+footer .container{
+    width: 100%;
+    background-color: black;
+}
+
+.row1{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 3%;
+}
+
+.row2{
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f1f1f1 !important;
+}
+
+body .container {
+  max-width: 1100px;
+}
+
+#filter-buttons button {
+  border-radius: 3px;
+  background: #fff;
+  border-color: transparent;
+}
+
+#filter-buttons button:hover {
+  background: #ddd;
+}
+
+#filter-buttons button.active {
+  color: #fff;
+  background: #6c757d;
+}
+
+#filterable-cards .card {
+  width: 15rem;
+  border: 2px solid transparent;
+}
+
+#filterable-cards .card.hide {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #filterable-cards {
+    justify-content: center;
+  }
+
+  #filterable-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+.card-body{
+    background-color: #ada0d3;
+    border-radius: 5px;
+}
+.card:hover{
+    /* Apply styles when the image is hovered */
+    transform: scale(1.05); /* Increase the size by 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);/* Add a subtle drop shadow*/
+    color: white;
+    .card-body{
+        /* transition-delay: 500ms; */
+        transition-property: background-color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 250ms;
+        background-color: black;
+    }
+}
+
+.card-text{
+    font-size: 80%;
+}
+
+.card:hover.card-body{
+    background-color: black;
+    color: white;
+}
+
+.footer-col ul{
+    list-style: none;
+}
+
+.footer-col-newsletter{
+    padding-top: 75px;
+    padding-right: 175px;
+}
+
+.footer-col-contact{
+    padding-right: 75px;
+}
+
+.footer-col h4{
+    /* color: white; */
+    color: #f6f3ff;
+    margin-bottom: 25px;
+    font-size: 22px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-col h4::before{
+    content: '';
+    width: 110px;
+    height: 2px;
+    position: absolute;
+    background-color: purple;
+    bottom: -10px;
+}
+
+.footer-col ul li{
+    padding: 10px 0;
+}
+.footer-col ul li a{
+    /* color: white; */
+    color: #f6f3ff;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footer-col ul li a:hover{
+    opacity: 1;
+    padding: 7px;
+    font-size: 17px;
+}
+.footer-col input{
+    border: none;
+    width: 380px;
+    height: 45px;
+    display: block;
+    padding-left: 20px;
+    margin: 14px 0;
+    border-radius: 10px;
+}
+
+.footer-col .inputSubmit{
+    border-radius: 10px;
+    background-color: purple;
+    border: none;
+    width: 400px;
+    /* color: white; */
+    color: #f6f3ff;
+    text-align: center;
+}
+.col p{
+    /* color: white; */
+    color: #f6f3ff;
+}
+.row hr{
+    opacity: 0.7;
+}
+
+.row2 .socialIcons i{
+    display: inline-block;
+    /* color: white; */
+    color: #f6f3ff;
+    font-size: 20px;
+    margin: 0 15px;
+    transition: 0.5s;
+}
+
+.row2 .socialIcons:nth-child(1):hover {
+    color: #e91e64;
+}
+
+.icons .fa{
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    /* color: white; */
+    color: #f6f3ff;
+}
+
+.fa fa-facebook:hover{
+    color: #f44336;
+} 
+
+.wrapper .button{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+
+    margin: 0 5px;
+    overflow: hidden;
+    /* background: #fff; */
+    background: #f6f3ff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:hover{
+    width: 195px;
+  }
+
+  .wrapper .button:nth-child(1):hover {
+    width: 193.5px;
+    transition: all 0.3s ease-out;
+
+  }
+  .wrapper .button:nth-child(2):hover {
+    width: 163.5px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(3):hover {
+    width: 201.15px;
+    transition: all 0.3s ease-out;
+  }
+
+  .wrapper .button:nth-child(4):hover {
+    width: 183.5px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button .icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(1):hover .icon{
+    background: #4267B2;
+
+  }
+  .wrapper .button:nth-child(2):hover .icon{
+    background: #1DA1F2;
+  }
+  .wrapper .button:nth-child(3):hover .icon{
+    background: #E1306C;
+  }
+
+  .wrapper .button:nth-child(4):hover .icon{
+    background: #ff0000;
+  }
+  .wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+    display: inline-block;
+  }
+
+  
+  
+  .wrapper .button:hover .icon i{
+    /* color: #fff; */
+    color: #f6f3ff;
+    text-align: right;
+    
+  }
+  .wrapper .button span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(1) span{
+    color: #4267B2;
+  }
+  .wrapper .button:nth-child(2) span{
+    color: #1DA1F2;
+  }
+  .wrapper .button:nth-child(3) span{
+    color: #E1306C;
+  }
+  
+  .wrapper .button:nth-child(4) span{
+    color: #ff0000;
+  }
+
+@media (max-width: 600px){
+    footer .row{
+        flex-direction: column;
+        padding: 20px 30px;
+        text-align: center;
+    }
+
+    footer .footer-col ul{
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    .footer-col input{
+        width: 100%;
+    }
+}
+
+
+  
