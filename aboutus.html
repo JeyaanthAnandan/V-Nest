@@ -1,2278 +1,2573 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About us Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="swiper-bundle.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-</head>
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+    body {
+      margin: 0;
+      padding: 0;
+      --parent-container2-height: 60vh;
+      box-sizing: border-box;
+      background-color: white;
+    }
 
-  .header {
+    .about-section {
+      background: url("pic.jpg") no-repeat left;
+      background-size: 55%;
+      background-color: #ffffff;
+      overflow: hidden;
+      padding: 100px 0;
+      
+    }
+
+    .inner-container {
+      width: 40%;
+      float: right;
+      background-color: rgba(128, 0, 128);
+      padding: 100px;
+      color: white;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+
+    .inner-container h1 {
+      margin-bottom: 30px;
+      font-size: 30px;
+      font-weight: 900;
+    }
+
+    .text {
+      font-size: 13px;
+      color: white;
+      line-height: 30px;
+      text-align: justify;
+      margin-bottom: 40px;
+    }
+
+
+
+    @media screen and (max-width: 1200px) {
+      .inner-container {
+        padding: 80px;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      .about-section {
+        background-size: 100%;
+        padding: 100px 40px;
+      }
+      .inner-container {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .about-section {
+        padding: 0;
+      }
+      .inner-container {
+        padding: 60px;
+      }
+    }
+    .parent-container2 {
+      background-color: transparent;
+      height: var(--parent-container2-height);
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      margin-top: 7%;
+      display: flex;
+    }
+    .child-container3,
+    .child-container4 {
+      width: 500px;
+      height: 450px;
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: contain;
+      margin-top: 10px;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+      padding: 30px 50px;
+      background: #fff;
+      cursor: pointer;
+      margin-right: 30px;
+    }
+
+    .card:hover {
+      height: 320px;
+    }
+
+    .imgbox {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-120px);
+      z-index: 99;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .content {
+      padding: 10px 20px;
+      text-align: center;
+      transform: translateY(-450px);
+      opacity: 0;
+      transition: 0.3s;
+      margin-top: 70px;
+      line-height: 1.4;
+    }
+
+    .card:hover > .content {
+      opacity: 1;
+      transform: translateY(-180px);
+    }
+
+    .content h2 {
+      color: #7f9ead;
+    }
+    .parent-container3 {
+      height: 90vh;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      border-radius: 60px;
+    }
+    .wrapper {
+      width: auto;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      height: 400px;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: start;
+    }
+
+    .card1 {
+      width: 80px;
+      border-radius: 0.75rem;
+      background-size: cover;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 2rem;
+      margin: 0 10px;
+      display: flex;
+      align-items: flex-end;
+      transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+      box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+      background-color: red;
+    }
+
+    .card1 > .row {
+      color: black;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .card1 > .row > .icon {
+      background: #223;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px;
+    }
+
+    .card1 > .row > .description {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+      height: 80px;
+      width: 520px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition-delay: 0.3s;
+      transition: all 0.3s ease;
+    }
+
+    .description p {
+      color:white;
+      padding-top: 30px;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      backdrop-filter: blur(10px); 
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+    }
+
+
+    .description p span {
+      display: block; 
+      font-size: 20px;
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked + label {
+      width: 600px;
+    }
+
+    input:checked + label .description {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    .parent-container3 h3 {
+      font-size: 50px;
+      text-align: center;
+      margin-top: -10px;
+    }
+    .parent-container3 p {
+      margin-bottom: 30px;
+      text-align: center;
+      margin-top: -10px;
+      font-size: 25px;
+    }
+    .parent-container4 {
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      background-color: white;
+    }
+    .parent-container4 h1 {
+      margin-right: 9%;
+    }
+
+    .tabs-container {
+      padding: 16px;
+      width: 100%;
+      max-width: 480px;
+      min-width: 320px;
+      display: flex;
+      margin: 10px;
+      border-radius: 16px;
+      background-color: white;
+    }
+
+    header {
+      position: relative;
+    }
+
+    .tab-content-wrapper {
+      overflow-y: hidden;
+      overflow-x: auto;
+      height: 300px;
+      transition: all 0.45s ease-in-out;
+      padding: 0 16px;
+    }
+
+    .tab-content h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 0px;
+      margin-bottom: 8px;
+    }
+
+    .tab-content {
+      font-size: 0.8rem;
+      min-height: 300px;
+      min-width: 240px;
+      overflow-x: auto;
+      transition: all 0.45s ease-in-out;
+    }
+
+    .tabs {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #ffffff;
+      list-style-type: none;
+      padding-right: 16px;
+      gap: 8px;
+    }
+
+    .tabs a {
+      position: relative;
+      display: flex;
+      text-decoration: none;
+      width: 100%;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: left;
+      border-radius: 8px;
+      justify-content: start;
+      padding: 12px;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .tabs a img {
+      height: 20px;
+      width: 20px;
+    }
+
+    .tabs .active,
+    .tabs a:hover {
+      font-weight: 700;
+      outline: none;
+      color: white;
+      background-color: var(--gray-dark);
+    }
+
+    .tabs .active svg {
+      stroke: var(--white);
+    }
+
+    .tabs a:hover svg {
+      stroke: var(--white);
+    }
+    .child-container5 {
+      width: 100%;
+      height: 300px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+    body {
+      font-size: 1.6rem;
+      font-family: "Rubik", sans-serif;
+      background: hsl(0, 0%, 100%);
+    }
+    .container {
+      width: auto;
+      padding: 0 1rem;
+      margin: 0 auto;
+      height: 400px;
+    }
+    header {
+      text-align: center;
+    }
+    .section-heading {
+      margin: 3rem 0;
+      font-size: 4rem;
+      padding-bottom: 0.7rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-heading::before,
+    .section-heading::after {
+      content: "";
+      position: absolute;
+    }
+    .section-heading::before {
+      width: 100%;
+      height: 0.2rem;
+      bottom: 0;
+      left: 0;
+      background: hsl(201.43, 13.21%, 58.43%);
+    }
+    .section-heading::after {
+      bottom: -0.4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1rem;
+      height: 1rem;
+      background: hsl(0, 0%, 100%);
+    }
+    .tab-container {
+      width: 82%;
+      margin: 0 auto 3rem auto;
+      box-shadow: 0 0.8rem 1rem black;
+      height: 70%;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .tab-filter-container {
+      padding: 2rem;
+      text-align: center;
+      background: hsl(288, 88%, 46%);
+    }
+    .filter-btn {
+      display: inline-flex;
+      padding: 0.8rem 2.5rem;
+      cursor: pointer;
+      border-radius: 2rem;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+    .filter-btn.active {
+      background: hsl(288, 88%, 29%);
+      color: white;
+    }
+    .tab-filter-item-container {
+      background: white;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .tab-item {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      padding: 0rem 3rem;
+      transform: translateY(100%);
+      background: white;
+      transition: transform 0.5s ease-in-out;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+      place-items: center start;
+    }
+    .tab-img {
+      width: 30rem;
+    }
+    .tab-heading {
+      padding: 2rem 0;
+      font-size: 3rem;
+    }
+    .tab-item.select_tab {
+      transform: translateY(0);
+      transition: transform 0.5s ease-in-out;
+      background: white;
+      animation: feadIn 0.6s ease-in-out;
+    }
+    @keyframes feadIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .wrapper1 {
+      margin-left: 100px;
+      width: 1400px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      margin-left: -5px;
+      background-color: transparent;
+    }
+    .wrapper1 i {
+      top: 50%;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      font-size: 1.25rem;
+      position: absolute;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.1s linear;
+      z-index: 2;
+    }
+    .wrapper1 i:active {
+      transform: translateY(-50%) scale(0.85);
+    }
+
+    .wrapper1 .carousel {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100% / 3) - 12px);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      border-radius: 8px;
+      scroll-behavior: smooth;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel.no-transition {
+      scroll-behavior: auto;
+    }
+    .carousel.dragging {
+      scroll-snap-type: none;
+      scroll-behavior: auto;
+    }
+    .carousel.dragging .card {
+      cursor: auto;
+      user-select: none;
+    }
+    .carousel :where(.card, .img) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .carousel .card {
+      scroll-snap-align: start;
+      height: 342px;
+      background: rgba(128, 0, 128, 0.3);
+      border: 10px solid black;
+      width: 300px;
+      cursor: pointer;
+      padding-bottom: 15px;
+      flex-direction: column;
+      border-radius: 8px;
+    }
+    .carousel .card .img {
+      background: #8b53ff;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+    }
+    .card .img img {
+      width: 202px;
+      height: 202px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+    }
+    .carousel .card h2 {
+      font-weight: 500;
+      font-size: 1.56rem;
+      margin: 30px 0 5px;
+      color: white;
+    }
+    .carousel .card span {
+      color: #ffffff;
+      font-size: 1.31rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      .wrapper1 .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .wrapper1 .carousel {
+        grid-auto-columns: 100%;
+      }
+    }
+    .child-container6 {
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(128, 0, 128, 0.116);
+      border-radius: 60px 60px 0 0;
+      margin-top: 40px;
+    }
+    .child-container7 {
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(128, 0, 128, 0.116);
+    }
+    .child-container8 {
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(128, 0, 128, 0.116);
+      border-radius: 0 0 60px 60px;
+    }
+
+    .card2 {
+      width: 350px;
+      height: 300px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      box-shadow: 0 35px 65px rgba(6, 34, 70, 0.6);
+      overflow: hidden;
+      border-radius: 20px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      backdrop-filter: blur(20px);
+    }
+    .card2 img {
+      width: 250px;
+      height: 250px;
+      transition: 0.5s;
+    }
+    h4 {
+      background-color: #5ca3ff;
+      width: 60%;
+      position: absolute;
+      bottom: 80px;
+      right: -65%;
+      padding: 10px 0;
+      color: #ffffff;
+      text-align: center;
+      letter-spacing: 1px;
+      font-size: 20px;
+      font-weight: 600;
+      transform: skew(-5deg);
+      transition: 0.3s;
+    }
+    h5 {
+      background-color: #ffffff;
+      width: 80%;
+      padding: 12px 0;
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      position: absolute;
+      right: -85%;
+      bottom: 37px;
+      transform: skew(-5deg);
+      transition: 0.3s;
+    }
+    .card2:hover h4,
+    .card2:hover h5 {
+      right: -2%;
+    }
+    .card2:hover img {
+      transform: scale(1.15);
+      filter: contrast(120%);
+    }
+
+    .parent-container6 {
+      width: 90%;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: hsl(0, 0%, 35%);
+      margin-left: 110px;
+      margin-top: 40px;
+    }
+    .parent-container6 img {
+      display: block;
+      width: 400px;
+      height: 400px;
+    }
+    .parent-containter .container2 {
+      display: grid;
+      place-items: center;
+    }
+
+    .card2__container2 {
+      display: grid;
+      border-radius: 25px;
+    }
+
+    .card2__article2 {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card2__data2 {
+      background-color: hsl(0, 0%, 100%);
+      box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
+      border-radius: 1rem;
+      position: absolute;
+      bottom: -9rem;
+      opacity: 0;
+      transition: opacity 1s 1s;
+      margin-left: 17px;
+      height: 150px;
+    }
+
+    .card2__description2 {
+      display: block;
+      font-size: 12px;
+      margin-top: 25px;
+    }
+
+    .card2__title2 {
+      font-size: 32px;
+      color: hsl(0, 0%, 15%);
+    }
+    .card2__article2:hover .card2__data2 {
+      animation: show-data 1s forwards;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    .card2__article2:hover {
+      animation: remove-overflow 2s forwards;
+    }
+
+    .card2__article2:not(:hover) {
+      animation: show-overflow 2s forwards;
+    }
+
+    .card2__article2:not(:hover) .card2__data2 {
+      animation: remove-data 1s forwards;
+    }
+
+    /* Card animation */
+    @keyframes show-data {
+      50% {
+        transform: translateY(-10rem);
+      }
+      100% {
+        transform: translateY(-7rem);
+      }
+    }
+
+    @keyframes remove-overflow {
+      to {
+        overflow: initial;
+      }
+    }
+
+    @keyframes remove-data {
+      0% {
+        transform: translateY(-7rem);
+      }
+      50% {
+        transform: translateY(-10rem);
+      }
+      100% {
+        transform: translateY(0.5rem);
+      }
+    }
+
+    @keyframes show-overflow {
+      0% {
+        overflow: initial;
+        pointer-events: none;
+      }
+      50% {
+        overflow: hidden;
+      }
+    }
+
+    /*=============== BREAKPOINTS ===============*/
+    /* For small devices */
+    @media screen and (max-width: 340px) {
+      .container2 {
+        margin-inline: 1rem;
+      }
+
+      .card2__data2 {
+        width: 250px;
+        padding: 1rem;
+      }
+    }
+
+    /* For medium devices */
+    @media screen and (min-width: 768px) {
+      .card2__container2 {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+      }
+    }
+
+    /* For large devices */
+    @media screen and (min-width: 1120px) {
+      .container2 {
+        height: 80vh;
+      }
+
+      .card2__container2 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .card2__img2 {
+        width: 348px;
+      }
+      .card2__data2 {
+        width: 300px;
+        padding-inline: 2.5rem;
+      }
+    }
+    footer .container1 {
+      background-color: black;
+      width: 100%;
+    }
+
+    .row1 {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 50px;
+      padding-top: 50px;
+      padding-bottom: 3%;
+    }
+
+    .row2 {
+      display: flex;
+      justify-content: space-between;
+      padding: 1%;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col-newsletter {
+      padding-top: 75px;
+      padding-right: 175px;
+    }
+
+    .footer-col-contact {
+      padding-right: 75px;
+    }
+
+    .footer-col h2 {
+      color: white;
+      margin-bottom: 25px;
+      font-size: 22px;
+      position: relative;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .footer-col h2::before {
+      content: "";
+      width: 110px;
+      height: 2px;
+      position: absolute;
+      background-color: purple;
+      bottom: -10px;
+    }
+
+    .footer-col ul li {
+      padding: 10px 0;
+    }
+    .footer-col ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      opacity: 0.7;
+      transition: 0.5s;
+    }
+    .footer-col ul li a:hover {
+      opacity: 1;
+      padding: 7px;
+      font-size: 17px;
+    }
+    .footer-col input {
+      border: none;
+      width: 380px;
+      height: 45px;
+      display: block;
+      padding-left: 20px;
+      margin: 14px 0;
+      border-radius: 10px;
+    }
+
+    .footer-col .inputSubmit {
+      border-radius: 10px;
+      background-color: purple;
+      border: none;
+      width: 400px;
+      color: white;
+      text-align: center;
+    }
+    .col p {
+      color: white;
+    }
+    .row hr {
+      opacity: 0.7;
+    }
+
+    .row2 .socialIcons i {
+      display: inline-block;
+      color: white;
+      font-size: 20px;
+      margin: 0 15px;
+      transition: 0.5s;
+    }
+
+    .row2 .socialIcons:nth-child(1):hover {
+      color: #e91e64;
+    }
+
+    .icons .fa {
+      margin: 0 13px;
+      cursor: pointer;
+      padding: 18px 0;
+      color: white;
+    }
+
+    .fa fa-facebook:hover {
+      color: #f44336;
+    }
+
+    .wrapper0 .button1 {
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+
+      margin: 0 5px;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-out;
+    }
+    .wrapper0 .button1:hover {
+      width: 195px;
+    }
+
+    .wrapper0 .button1:nth-child(1):hover {
+      width: 193.5px;
+      transition: all 0.3s ease-out;
+    }
+    .wrapper0 .button1:nth-child(2):hover {
+      width: 163.5px;
+      transition: all 0.3s ease-out;
+    }
+    .wrapper0 .button1:nth-child(3):hover {
+      width: 201.15px;
+      transition: all 0.3s ease-out;
+    }
+
+    .wrapper0 .button1:nth-child(4):hover {
+      width: 183.5px;
+      transition: all 0.3s ease-out;
+    }
+    .wrapper0 .button1 .icon {
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      text-align: center;
+      border-radius: 50px;
+      box-sizing: border-box;
+      line-height: 60px;
+      transition: all 0.3s ease-out;
+    }
+    .wrapper0 .button1:nth-child(1):hover .icon {
+      background: #4267b2;
+    }
+    .wrapper0 .button1:nth-child(2):hover .icon {
+      background: #1da1f2;
+    }
+    .wrapper0 .button1:nth-child(3):hover .icon {
+      background: #e1306c;
+    }
+
+    .wrapper0 .button1:nth-child(4):hover .icon {
+      background: #ff0000;
+    }
+    .wrapper0 .button1 .icon i {
+      font-size: 25px;
+      line-height: 60px;
+      transition: all 0.3s ease-out;
+      display: inline-block;
+    }
+
+    .wrapper0 .button1:hover .icon i {
+      color: #fff;
+      text-align: right;
+    }
+    .wrapper0 .button1 span {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 60px;
+      margin-left: 10px;
+      transition: all 0.3s ease-out;
+    }
+    .wrapper0 .button1:nth-child(1) span {
+      color: #4267b2;
+    }
+    .wrapper0 .button1:nth-child(2) span {
+      color: #1da1f2;
+    }
+    .wrapper0 .button1:nth-child(3) span {
+      color: #e1306c;
+    }
+
+    .wrapper0 .button1:nth-child(4) span {
+      color: #ff0000;
+    }
+
+    @media (max-width: 600px) {
+      footer .row {
+        flex-direction: column;
+        padding: 20px 30px;
+        text-align: center;
+      }
+
+      footer .footer-col ul {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+      .footer-col input {
+        width: 100%;
+      }
+    }
+    .header{
+    min-height: 100vh;
     width: 100%;
     background-position: center;
     background-size: cover;
     position: relative;
-  }
-
-  nav {
+}
+nav{
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
-  }
+}
 
-  nav img {
+nav img{
     width: 150px;
-  }
 
-  .nav-links {
+}
+
+.nav-links{
     flex: 1;
     text-align: right;
-    color: #000000;
+    color: black;
     font-size: 13px;
-  }
+}
 
-  .nav-links ul li {
+.nav-links ul li{
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-  }
+}
 
-  .nav-links ul li a {
-    color: #000000;
+.nav-links ul li a{
+    color: black;
     text-decoration: none;
     font-size: 13px;
-  }
+}
 
-  .nav-links ul li::after {
-    content: "";
+.nav-links ul li::after{
+    content: '';
     width: 0%;
     height: 2px;
-    background: rgb(0, 0, 0);
+    background: black;
     display: block;
     margin: auto;
     transition: 0.5s;
-  }
+}
 
-  .nav-links ul li:hover::after {
+.nav-links ul li:hover::after{
     width: 100%;
-  }
 
-  body {
-    margin: 0;
-    padding: 0;
-    --parent-container2-height: 60vh;
-    box-sizing: border-box;
-    background-color: white;
-  }
-
-  .about-section {
-    background: url("img/abtus2.jpg") no-repeat left;
-    background-size: 55%;
-    background-color: #ffffff;
-    overflow: hidden;
-    padding: 100px 0;
-  }
-
-  .inner-container {
-    width: 40%;
-    float: right;
-    background-color: rgba(128, 0, 128);
-    padding: 150px;
-    color: white;
-  }
-
-  .inner-container h1 {
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 900;
-  }
-
-  .text {
-    font-size: 13px;
-    color: white;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
-  }
-
-  .skills {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 13px;
-  }
-
-  @media screen and (max-width: 1200px) {
-    .inner-container {
-      padding: 80px;
-    }
-  }
-
-  @media screen and (max-width: 1000px) {
-    .about-section {
-      background-size: 100%;
-      padding: 100px 40px;
-    }
-
-    .inner-container {
-      width: 100%;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .about-section {
-      padding: 0;
-    }
-
-    .inner-container {
-      padding: 60px;
-    }
-  }
-
-  .parent-container2 {
-    background-color: transparent;
-    height: var(--parent-container2-height);
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin-top: 7%;
-    display: flex;
-  }
-
-  .child-container3,
-  .child-container4 {
-    width: 500px;
-    height: 450px;
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: contain;
-    margin-top: 10px;
-  }
-
-  .card {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
-    padding: 30px 50px;
-    background: #fff;
-    cursor: pointer;
-    margin-right: 30px;
-  }
-
-  .card:hover {
-    height: 320px;
-  }
-
-  .imgbox {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform: translateY(-120px);
-    z-index: 99;
-  }
-
-  img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-  }
-
-  .content {
-    padding: 10px 20px;
-    text-align: center;
-    transform: translateY(-450px);
-    opacity: 0;
-    transition: 0.3s;
-    margin-top: 70px;
-    line-height: 1.4;
-  }
-
-  .card:hover>.content {
-    opacity: 1;
-    transform: translateY(-180px);
-  }
-
-  .content h2 {
-    color: #7f9ead;
-  }
-
-  .parent-container3 {
-    height: 90vh;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    border-radius: 60px;
-  }
-
-  .wrapper {
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .container {
-    height: 400px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
-  }
-
-  .card1 {
-    width: 80px;
-    border-radius: 0.75rem;
-    background-size: cover;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 2rem;
-    margin: 0 10px;
-    display: flex;
-    align-items: flex-end;
-    transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
-    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
-  }
-
-  .card1>.row {
-    color: white;
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  .card1>.row>.icon {
-    background: #223;
-    color: white;
-    border-radius: 50%;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-  }
-
-  .card1>.row>.description {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    height: 80px;
-    width: 520px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition-delay: 0.3s;
-    transition: all 0.3s ease;
-  }
-
-  .description p {
-    color: #090934;
-    padding-top: 5px;
-  }
-
-  .description h4 {
-    text-transform: uppercase;
-  }
-
-  input {
+}
+nav .fa{
     display: none;
-  }
-
-  input:checked+label {
-    width: 600px;
-  }
-
-  input:checked+label .description {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-
-  .card1[for="c1"] {
-    background-image: url("img/abtus2.jpg");
-  }
-
-  .card1[for="c2"] {
-    background-image: url("img/abtus2.jpg");
-  }
-
-  .card1[for="c3"] {
-    background-image: url("img/abtus2.jpg");
-  }
-
-  .card1[for="c4"] {
-    background-image: url("img/abtus2.jpg");
-  }
-
-  .parent-container3 h3 {
-    font-size: 50px;
-    text-align: center;
-    margin-top: -10px;
-  }
-
-  .parent-container3 p {
-    margin-bottom: 30px;
-    text-align: center;
-    margin-top: -10px;
-    font-size: 25px;
-  }
-
-  .parent-container4 {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    background-color: white;
-  }
-
-  .parent-container4 h1 {
-    margin-right: 9%;
-  }
-
-  .tabs-container {
-    padding: 16px;
-    width: 100%;
-    max-width: 480px;
-    min-width: 320px;
-    display: flex;
-    margin: 10px;
-    border-radius: 16px;
-    background-color: white;
-  }
-
-  header {
-    position: relative;
-  }
-
-  .tab-content-wrapper {
-    overflow-y: hidden;
-    overflow-x: auto;
-    height: 300px;
-    transition: all 0.45s ease-in-out;
-    padding: 0 16px;
-  }
-
-  .tab-content h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-top: 0px;
-    margin-bottom: 8px;
-  }
-
-  .tab-content {
-    font-size: 0.8rem;
-    min-height: 300px;
-    min-width: 240px;
-    overflow-x: auto;
-    transition: all 0.45s ease-in-out;
-  }
-
-  .tabs {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid #ffffff;
-    list-style-type: none;
-    padding-right: 16px;
-    gap: 8px;
-  }
-
-  .tabs a {
-    position: relative;
-    display: flex;
-    text-decoration: none;
-    width: 100%;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: left;
-    border-radius: 8px;
-    justify-content: start;
-    padding: 12px;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .tabs a img {
-    height: 20px;
-    width: 20px;
-  }
-
-  .tabs .active,
-  .tabs a:hover {
-    font-weight: 700;
-    outline: none;
-    color: white;
-    background-color: var(--gray-dark);
-  }
-
-  .tabs .active svg {
-    stroke: var(--white);
-  }
-
-  .tabs a:hover svg {
-    stroke: var(--white);
-  }
-
-  .child-container5 {
-    width: 100%;
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-  }
-
-  html {
-    font-size: 62.5%;
-  }
-
-  body {
-    font-size: 1.6rem;
-    font-family: "Rubik", sans-serif;
-    background: hsl(0, 0%, 100%);
-  }
-
-  .container {
-    width: auto;
-    padding: 0 1rem;
-    margin: 0 auto;
-    height: 400px;
-  }
-
-  header {
-    text-align: center;
-  }
-
-  .section-heading {
-    margin: 3rem 0;
-    font-size: 4rem;
-    padding-bottom: 0.7rem;
-    position: relative;
-    display: inline-block;
-  }
-
-  .section-heading::before,
-  .section-heading::after {
-    content: "";
-    position: absolute;
-  }
-
-  .section-heading::before {
-    width: 100%;
-    height: 0.2rem;
-    bottom: 0;
-    left: 0;
-    background: hsl(201.43, 13.21%, 58.43%);
-  }
-
-  .section-heading::after {
-    bottom: -0.4rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1rem;
-    height: 1rem;
-    background: hsl(0, 0%, 100%);
-  }
-
-  .tab-container {
-    width: 82%;
-    margin: 0 auto 3rem auto;
-    box-shadow: 0 0.8rem 1rem black;
-    height: 70%;
-    background-color: white;
-    border-radius: 10px;
-  }
-
-  .tab-filter-container {
-    padding: 2rem;
-    text-align: center;
-    background: hsl(288, 88%, 46%);
-  }
-
-  .filter-btn {
-    display: inline-flex;
-    padding: 0.8rem 2.5rem;
-    cursor: pointer;
-    border-radius: 2rem;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 500;
-  }
-
-  .filter-btn.active {
-    background: hsl(288, 88%, 29%);
-    color: white;
-  }
-
-  .tab-filter-item-container {
-    background: white;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .tab-item {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    padding: 0rem 3rem;
-    transform: translateY(100%);
-    background: white;
-    transition: transform 0.5s ease-in-out;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
-    place-items: center start;
-  }
-
-  .tab-img {
-    width: 30rem;
-  }
-
-  .tab-heading {
-    padding: 2rem 0;
-    font-size: 3rem;
-  }
-
-  .tab-item.select_tab {
-    transform: translateY(0);
-    transition: transform 0.5s ease-in-out;
-    background: white;
-    animation: feadIn 0.6s ease-in-out;
-  }
-
-  @keyframes feadIn {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .wrapper1 {
-    margin-left: 100px;
-    width: 1400px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    margin-left: -5px;
-    background-color: transparent;
-  }
-
-  .wrapper1 i {
-    top: 50%;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    position: absolute;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
-    z-index: 2;
-  }
-
-  .wrapper1 i:active {
-    transform: translateY(-50%) scale(0.85);
-  }
-
-  .wrapper1 .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    border-radius: 8px;
-    scroll-behavior: smooth;
-  }
-
-  .carousel::-webkit-scrollbar {
-    display: none;
-  }
-
-  .carousel.no-transition {
-    scroll-behavior: auto;
-  }
-
-  .carousel.dragging {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-  }
-
-  .carousel.dragging .card {
-    cursor: auto;
-    user-select: none;
-  }
-
-  .carousel :where(.card, .img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .carousel .card {
-    scroll-snap-align: start;
-    height: 342px;
-    background: rgba(128, 0, 128, 0.3);
-    border: 10px solid black;
-    width: 300px;
-    cursor: pointer;
-    padding-bottom: 15px;
-    flex-direction: column;
-    border-radius: 8px;
-  }
-
-  .carousel .card .img {
-    background: #8b53ff;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-  }
-
-  .card .img img {
-    width: 202px;
-    height: 202px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-  }
-
-  .carousel .card h2 {
-    font-weight: 500;
-    font-size: 1.56rem;
-    margin: 30px 0 5px;
-    color: white;
-  }
-
-  .carousel .card span {
-    color: #ffffff;
-    font-size: 1.31rem;
-  }
-
-  @media screen and (max-width: 900px) {
-    .wrapper1 .carousel {
-      grid-auto-columns: calc((100% / 2) - 9px);
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .wrapper1 .carousel {
-      grid-auto-columns: 100%;
-    }
-  }
-
-  .child-container6 {
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    text-align: center;
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(128, 0, 128, 0.116);
-    border-radius: 60px 60px 0 0;
-    margin-top: 40px;
-  }
-
-  .child-container7 {
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    text-align: center;
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(128, 0, 128, 0.116);
-  }
-
-  .child-container8 {
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    text-align: center;
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(128, 0, 128, 0.116);
-    border-radius: 0 0 60px 60px;
-  }
-
-  .card2 {
-    width: 350px;
-    height: 300px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    box-shadow: 0 35px 65px rgba(6, 34, 70, 0.6);
-    overflow: hidden;
-    border-radius: 20px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    backdrop-filter: blur(20px);
-  }
-
-  .card2 img {
-    width: 250px;
-    height: 250px;
-    transition: 0.5s;
-  }
-
-  h4 {
-    background-color: #5ca3ff;
-    width: 60%;
-    position: absolute;
-    bottom: 80px;
-    right: -65%;
-    padding: 10px 0;
-    color: #ffffff;
-    text-align: center;
-    letter-spacing: 1px;
-    font-size: 20px;
-    font-weight: 600;
-    transform: skew(-5deg);
-    transition: 0.3s;
-  }
-
-  h5 {
-    background-color: #ffffff;
-    width: 80%;
-    padding: 12px 0;
-    text-align: center;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    position: absolute;
-    right: -85%;
-    bottom: 37px;
-    transform: skew(-5deg);
-    transition: 0.3s;
-  }
-
-  .card2:hover h4,
-  .card2:hover h5 {
-    right: -2%;
-  }
-
-  .card2:hover img {
-    transform: scale(1.15);
-    filter: contrast(120%);
-  }
-
-  .parent-container5 {
-    width: 95%;
-    height: auto;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .child-container9 {
-    width: calc(100% / 3);
-    height: 480px;
-    float: left;
-    position: relative;
-  }
-
-  .child-container10 {
-    width: calc(100% / 3);
-    height: 480px;
-    position: relative;
-  }
-
-  .child-container11 {
-    width: calc(100% / 3);
-    height: 480px;
-    float: right;
-    position: relative;
-  }
-
-  .parent-container6 {
-    width: 90%;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    color: hsl(0, 0%, 35%);
-    margin-left: 110px;
-    margin-top: 40px;
-  }
-
-  .parent-container6 img {
-    display: block;
-    width: 400px;
-    height: 400px;
-  }
-
-  .parent-containter .container2 {
-    display: grid;
-    place-items: center;
-  }
-
-  .card2__container2 {
-    display: grid;
-    border-radius: 25px;
-  }
-
-  .card2__article2 {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .card2__data2 {
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
-    border-radius: 1rem;
-    position: absolute;
-    bottom: -9rem;
-    opacity: 0;
-    transition: opacity 1s 1s;
-    margin-left: 17px;
-    height: 150px;
-  }
-
-  .card2__description2 {
-    display: block;
-    font-size: 12px;
-    margin-top: 25px;
-  }
-
-  .card2__title2 {
-    font-size: 32px;
-    color: hsl(0, 0%, 15%);
-  }
-
-  .card2__article2:hover .card2__data2 {
-    animation: show-data 1s forwards;
-    opacity: 1;
-    transition: opacity 0.3s;
-  }
-
-  .card2__article2:hover {
-    animation: remove-overflow 2s forwards;
-  }
-
-  .card2__article2:not(:hover) {
-    animation: show-overflow 2s forwards;
-  }
-
-  .card2__article2:not(:hover) .card2__data2 {
-    animation: remove-data 1s forwards;
-  }
-
-  /* Card animation */
-  @keyframes show-data {
-    50% {
-      transform: translateY(-10rem);
-    }
-
-    100% {
-      transform: translateY(-7rem);
-    }
-  }
-
-  @keyframes remove-overflow {
-    to {
-      overflow: initial;
-    }
-  }
-
-  @keyframes remove-data {
-    0% {
-      transform: translateY(-7rem);
-    }
-
-    50% {
-      transform: translateY(-10rem);
-    }
-
-    100% {
-      transform: translateY(0.5rem);
-    }
-  }
-
-  @keyframes show-overflow {
-    0% {
-      overflow: initial;
-      pointer-events: none;
-    }
-
-    50% {
-      overflow: hidden;
-    }
-  }
-
-  /*=============== BREAKPOINTS ===============*/
-  /* For small devices */
-  @media screen and (max-width: 340px) {
-    .container2 {
-      margin-inline: 1rem;
-    }
-
-    .card2__data2 {
-      width: 250px;
-      padding: 1rem;
-    }
-  }
-
-  /* For medium devices */
-  @media screen and (min-width: 768px) {
-    .card2__container2 {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 1.5rem;
-    }
-  }
-
-  /* For large devices */
-  @media screen and (min-width: 1120px) {
-    .container2 {
-      height: 80vh;
-    }
-
-    .card2__container2 {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .card2__img2 {
-      width: 348px;
-    }
-
-    .card2__data2 {
-      width: 300px;
-      padding-inline: 2.5rem;
-    }
-  }
-
-  footer .container1 {
-    background-color: black;
-    width: 100%;
-  }
-
-  .row1 {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 50px;
-    padding-top: 50px;
-    padding-bottom: 3%;
-  }
-
-  .row2 {
-    display: flex;
-    justify-content: space-between;
-    padding: 1%;
-  }
-
-  .footer-col ul {
-    list-style: none;
-  }
-
-  .footer-col-newsletter {
-    padding-top: 75px;
-    padding-right: 175px;
-  }
-
-  .footer-col-contact {
-    padding-right: 75px;
-  }
-
-  .footer-col h2 {
-    color: white;
-    margin-bottom: 25px;
-    font-size: 22px;
-    position: relative;
-    font-family: "Poppins", sans-serif;
-  }
-
-  .footer-col h2::before {
-    content: "";
-    width: 110px;
-    height: 2px;
-    position: absolute;
-    background-color: purple;
-    bottom: -10px;
-  }
-
-  .footer-col ul li {
-    padding: 10px 0;
-  }
-
-  .footer-col ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    opacity: 0.7;
-    transition: 0.5s;
-  }
-
-  .footer-col ul li a:hover {
-    opacity: 1;
-    padding: 7px;
-    font-size: 17px;
-  }
-
-  .footer-col input {
-    border: none;
-    width: 380px;
-    height: 45px;
-    display: block;
-    padding-left: 20px;
-    margin: 14px 0;
-    border-radius: 10px;
-  }
-
-  .footer-col .inputSubmit {
-    border-radius: 10px;
-    background-color: purple;
-    border: none;
-    width: 400px;
-    color: white;
-    text-align: center;
-  }
-
-  .col p {
-    color: white;
-  }
-
-  .row hr {
-    opacity: 0.7;
-  }
-
-  .row2 .socialIcons i {
-    display: inline-block;
-    color: white;
-    font-size: 20px;
-    margin: 0 15px;
-    transition: 0.5s;
-  }
-
-  .row2 .socialIcons:nth-child(1):hover {
-    color: #e91e64;
-  }
-
-  .icons .fa {
-    margin: 0 13px;
-    cursor: pointer;
-    padding: 18px 0;
-    color: white;
-  }
-
-  .fa fa-facebook:hover {
-    color: #f44336;
-  }
-
-  .wrapper0 .button1 {
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-
-    margin: 0 5px;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-out;
-  }
-
-  .wrapper0 .button1:hover {
-    width: 195px;
-  }
-
-  .wrapper0 .button1:nth-child(1):hover {
-    width: 193.5px;
-    transition: all 0.3s ease-out;
-  }
-
-  .wrapper0 .button1:nth-child(2):hover {
-    width: 163.5px;
-    transition: all 0.3s ease-out;
-  }
-
-  .wrapper0 .button1:nth-child(3):hover {
-    width: 201.15px;
-    transition: all 0.3s ease-out;
-  }
-
-  .wrapper0 .button1:nth-child(4):hover {
-    width: 183.5px;
-    transition: all 0.3s ease-out;
-  }
-
-  .wrapper0 .button1 .icon {
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    text-align: center;
-    border-radius: 50px;
-    box-sizing: border-box;
-    line-height: 60px;
-    transition: all 0.3s ease-out;
-  }
-
-  .wrapper0 .button1:nth-child(1):hover .icon {
-    background: #4267b2;
-  }
-
-  .wrapper0 .button1:nth-child(2):hover .icon {
-    background: #1da1f2;
-  }
-
-  .wrapper0 .button1:nth-child(3):hover .icon {
-    background: #e1306c;
-  }
-
-  .wrapper0 .button1:nth-child(4):hover .icon {
-    background: #ff0000;
-  }
-
-  .wrapper0 .button1 .icon i {
-    font-size: 25px;
-    line-height: 60px;
-    transition: all 0.3s ease-out;
-    display: inline-block;
-  }
-
-  .wrapper0 .button1:hover .icon i {
-    color: #fff;
-    text-align: right;
-  }
-
-  .wrapper0 .button1 span {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 60px;
-    margin-left: 10px;
-    transition: all 0.3s ease-out;
-  }
-
-  .wrapper0 .button1:nth-child(1) span {
-    color: #4267b2;
-  }
-
-  .wrapper0 .button1:nth-child(2) span {
-    color: #1da1f2;
-  }
-
-  .wrapper0 .button1:nth-child(3) span {
-    color: #e1306c;
-  }
-
-  .wrapper0 .button1:nth-child(4) span {
-    color: #ff0000;
-  }
-
-  @media (max-width: 600px) {
-    footer .row {
-      flex-direction: column;
-      padding: 20px 30px;
-      text-align: center;
-    }
-
-    footer .footer-col ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
-    }
-
-    .footer-col input {
-      width: 100%;
-    }
-  }
-</style>
-
-<body>
-  <section class="header">
-    <nav>
-      <a href="index.html"><img src="img/logo.png" /></a>
-      <div class="nav-links" id="navLinks">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-                            <li><a href="aboutus.html">About</a></li>
-                            <li><a href="contact.html">Contact US</a></li>
-                            <li><a href="facilities.html">Facilities</a></li>
-                            <li><a href="incubation.html">Incubation</a></li>
-                            <li><a href="">Schemes</a></li>
-                            <li><a href="">Gallery</a></li>
-                            <li><a href="career.html">Career</a></li>
-        </ul>
-      </div>
-    </nav>
-  </section>
-  <div class="about-section">
-    <div class="inner-container">
-      <h1>About Us</h1>
-      <p class="text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-        velit ducimus, enim inventore earum, eligendi nostrum pariatur
-        necessitatibus eius dicta a voluptates sit deleniti autem error eos
-        totam nisi neque voluptates sit deleniti autem error eos totam nisi
-        neque.
-      </p>
-      <div class="skills">
-        <span>Web Design</span>
-        <span>Photoshop & Illustrator</span>
-        <span>Coding</span>
+}
+    
+  </style>
+  <body>
+    <section class="header">
+      <nav>
+          <a href="index.html"><img src="logo.png"></a>
+          <div class="nav-links" id="navLinks">
+              <i class="fa fa-times" onclick="hideMenu()"></i>
+              <ul>
+                  <li><a href="">HOME</a></li>
+                  <li><a href="">ABOUT</a></li>
+                  <li><a href="">FACILITIES</a></li>
+                  <li><a href="#"></a>SCHEMES</li>
+                  <li><a href=""></a>INCUBATION</li>
+                  <li><a href="">GALLERY</a></li>
+                  <li><a href=""></a>CAREER</li>
+                  <li><a href="">CONTACT US</a></li>
+              </ul>
+          </div>
+          <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+    <div class="about-section">
+      <div class="inner-container">
+        <h1>About Us</h1>
+        <p class="text">
+          At VIT Chennai, we have cultivated a dynamic ecosystem for innovation,
+          and our commitment is showcased through two dedicated incubation
+          centres. These centres serve as the launch pad for students and
+          faculty, transforming their startup concepts into reality. Our faculty
+          members are devoted to coordinating innovation and startup
+          initiatives.<br><br> Our VIT Social Business Incubator, established in 2017
+          through funding from the British Council in collaboration with
+          Cambridge Judge Business School, UK, and V-NEST, initiated in 2020
+          with institute support, are testaments to our forward-looking
+          approach.<br><br> V-NEST isn't just a space; it's a comprehensive support hub.
+          We empower students and early-stage entrepreneurs by offering office
+          facilities, access to institute infrastructure, funding opportunities,
+          research assistance, consultancy services, and mentorship.<br><br> At V-NEST,
+          we take pride in our meticulously developed Innovation and Startup
+          policy, a guide that propels our students and faculty members towards
+          success in innovation. We enable them to fly high.
+        </p>
       </div>
     </div>
-  </div>
 
-  <div class="parent-container2">
-    <div class="child-container3">
-      <div class="card">
-        <div class="imgbox">
-          <img src="img/bmw.png" />
+    <div class="parent-container2">
+      <div class="child-container3">
+        <div class="card">
+          <div class="imgbox">
+            <img src="mission-transformed.jpeg" />
+          </div>
+
+          <div class="content">
+            <p>Strive to turn human resources as entrepreneurship source</p>
+          </div>
         </div>
+      </div>
+      <div class="child-container4">
+        <div class="card">
+          <div class="imgbox">
+            <img src="Vission-transformed.jpeg" />
+          </div>
 
-        <div class="content">
-          <p>Strive to turn human resources as entrepreneurship source</p>
+          <div class="content"><br>
+              Create India’s Largest Startpreneur community amongst
+              Universities. Make entrepreneurship contagious. Endeavour for a
+              unicorn at a ratio of 1:10
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="child-container4">
-      <div class="card">
-        <div class="imgbox">
-          <img src="img/bmw.png" />
-        </div>
+    <div class="parent-container3">
+      <h3>Why us</h3>
+      <p>Lets say that we are the best</p>
+      <div class="wrapper">
+        <div class="container">
+          <input  type="radio" name="slide" id="c1" checked />
+          <label style="background-image: url(image1.jpeg);"for="c1" class="card1">
+            <div  class="row">
+              <div class="icon">1</div>
+              <div class="description">
+                <p style="font-size: 15px;"><span>Incubation Support</span> We provide comprehensive incubation support tailored to your startup's unique needs. Our dedicated team ensures hands-on guidance, refining your business model and strategy for success.</p>
 
-        <div class="content">
-          <p>
-            Create India’s Largest Startpreneur community amongst
-            Universities. Make entrepreneurship contagious. Endeavour for a
-            unicorn at a ratio of 1:10
-          </p>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c2" />
+          <label style="background-image: url(image1.jpeg);"for="c2" class="card1">
+            <div class="row">
+              <div class="icon">2</div>
+              <div  class="description">
+                <p style="font-size: 15px;"><span>Experienced Faculty</span>At V-Nest, Industry veterans and seasoned entrepreneurs provide insights, ensuring that you're equipped with the knowledge to navigate the complexities of the business world.</p>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c3" />
+          <label style="background-image: url(image1.jpeg);" for="c3" class="card1">
+            <div class="row">
+              <div class="icon">3</div>
+              <div class="description">
+                <p style="font-size: 15px;"><span>Industry Connections</span>With a vast network of industry connections, we bridge the gap between startups and established players, fostering collaborations that can elevate your venture to new heights.</p>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c4" />
+          <label style="background-image: url(image1.jpeg);" for="c4" class="card1">
+            <div class="row">
+              <div class="icon">4</div>
+              <div class="description">
+                <p style="font-size: 15px;"><span>Class-Leading Infrastructure</span>Our state-of-the-art co-working spaces at V-Nest provide the perfect environment for collaboration and innovation, setting the stage for your startup's success.</p>
+              </div>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c5" />
+          <label style="background-image: url(image1.jpeg);" for="c5" class="card1">
+            <div class="row">
+              <div class="icon">5</div>
+              <div class="description">
+                <p style="font-size: 15px;"><span>Research Assistance and Mentorship</span>With mentorship from industry experts and academicians we ensure that your startup not only survives but thrives in competitive landscapes.</p>
+              </div>
+            </div>
+          </label>
         </div>
       </div>
     </div>
-  </div>
-  <div class="parent-container3">
-    <h3>Why us</h3>
-    <p>Lets say that we are the best</p>
-    <div class="wrapper">
-      <div class="container">
-        <input type="radio" name="slide" id="c1" checked />
-        <label for="c1" class="card1">
-          <div class="row">
-            <div class="icon">1</div>
-            <div class="description">
-              <h4>Winter</h4>
-              <p>Winter has so much to offer - creative activities</p>
+    <div class="parent-container4">
+      <h1 style="text-align: center; margin-left: 40px">Our Team</h1>
+      <div class="child-container5">
+        <div class="container">
+          <div class="tab-container">
+            <div class="tab-filter-container">
+              <li class="filter-btn active" data-tab="web-design">
+                <ion-icon name="desktop-outline"></ion-icon>
+                Leadership
+              </li>
+              <li class="filter-btn" data-tab="web-development">
+                <ion-icon name="logo-nodejs"></ion-icon>
+                Management
+              </li>
+              <li class="filter-btn" data-tab="ux-design">
+                <ion-icon name="diamond-outline"></ion-icon>
+                Board of Directors
+              </li>
+              <li class="filter-btn" data-tab="app-development">
+                <ion-icon name="logo-google-playstore"></ion-icon>
+                VNEST Faculty Members
+              </li>
             </div>
-          </div>
-        </label>
-        <input type="radio" name="slide" id="c2" />
-        <label for="c2" class="card1">
-          <div class="row">
-            <div class="icon">2</div>
-            <div class="description">
-              <h4>Digital Technology</h4>
-              <p>Gets better every day - stay tuned</p>
-            </div>
-          </div>
-        </label>
-        <input type="radio" name="slide" id="c3" />
-        <label for="c3" class="card1">
-          <div class="row">
-            <div class="icon">3</div>
-            <div class="description">
-              <h4>Globalization</h4>
-              <p>Help people all over the world</p>
-            </div>
-          </div>
-        </label>
-        <input type="radio" name="slide" id="c4" />
-        <label for="c4" class="card1">
-          <div class="row">
-            <div class="icon">4</div>
-            <div class="description">
-              <h4>New technologies</h4>
-              <p>Space engineering becomes more and more advanced</p>
-            </div>
-          </div>
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="parent-container4">
-    <h1 style="text-align: center; margin-left: 40px">Our Team</h1>
-    <div class="child-container5">
-      <div class="container">
-        <div class="tab-container">
-          <div class="tab-filter-container">
-            <li class="filter-btn active" data-tab="web-design">
-              <ion-icon name="desktop-outline"></ion-icon>
-              Leadership
-            </li>
-            <li class="filter-btn" data-tab="web-development">
-              <ion-icon name="logo-nodejs"></ion-icon>
-              Management
-            </li>
-            <li class="filter-btn" data-tab="ux-design">
-              <ion-icon name="diamond-outline"></ion-icon>
-              Board of Directors
-            </li>
-            <li class="filter-btn" data-tab="app-development">
-              <ion-icon name="logo-google-playstore"></ion-icon>
-              VNEST Faculty Members
-            </li>
-          </div>
-          <div class="tab-filter-item-container">
-            <div class="tab-item web-design select_tab">
-              <div class="tab-content-left">
-                <img src="img/bmw.png" alt="web design" class="tab-img" />
+            <div class="tab-filter-item-container">
+              <div class="tab-item web-design select_tab">
+                <div class="tab-content-left">
+                  <img
+                    src="images/web design.jpg"
+                    alt="web design"
+                    class="tab-img"
+                  />
+                </div>
+                <div class="tab-content-right">
+                  <h1 class="tab-heading">Leadership</h1>
+                  <p class="paragraph">
+                    At VNEST, leadership embodies a spirit of innovation and collaboration. Guided by visionary mentors and driven by passionate student leaders, VNEST cultivates an environment where budding entrepreneurs can thrive. 
+                </div>
               </div>
-              <div class="tab-content-right">
-                <h1 class="tab-heading">Responsive Web Design</h1>
-                <p class="paragraph">
-                  Web design means creating websites with user-friendly
-                  structure and with aesthetic approach. A web designer always
-                  thinks about the layout, color scheme and unique design of a
-                  website
-                </p>
+              <div class="tab-item web-development">
+                <div class="tab-content-left">
+                  <h1 class="tab-heading">Management</h1>
+                  <p class="paragraph">
+                    management is the quiet force that keeps the engine running smoothly. With a blend of pragmatism and adaptability, the management team orchestrates the intricate dance of resources and logistics behind the scenes. Their calm demeanor and meticulous attention to detail instill confidence and trust among stakeholders.                  
+                  </p>
+                </div>
+                <div class="tab-content-right">
+                  <img
+                    src="images/web-development.jpg"
+                    alt="web development"
+                    class="tab-img"
+                  />
+                </div>
               </div>
-            </div>
-            <div class="tab-item web-development">
-              <div class="tab-content-left">
-                <h1 class="tab-heading">Web Development</h1>
-                <p class="paragraph">
-                  Web Development consists of two segments front end
-                  development and backend development. Front-end Developers
-                  work with visual designs of a website and build the sites
-                  with using of code
-                </p>
+              <div class="tab-item ux-design">
+                <div class="tab-content-left">
+                  <img
+                    src="images/ux-ui.jpg"
+                    alt="UI/UX Design"
+                    class="tab-img"
+                  />
+                </div>
+                <div class="tab-content-right">
+                  <h1 class="tab-heading">Board of Directors</h1>
+                  <p class="paragraph">
+                    the Board of Directors comprises accomplished individuals from various fields,<br> guiding strategic decisions with their expertise. Their insight and leadership steer VNEST towards its goals, ensuring it remains a beacon for aspiring entrepreneurs<br> at VIT Chennai.
+                  </p>
+                </div>
               </div>
-              <div class="tab-content-right">
-                <img src="img/apple.png" alt="web development" class="tab-img" />
-              </div>
-            </div>
-            <div class="tab-item ux-design">
-              <div class="tab-content-left">
-                <img src="img/london.png" alt="UI/UX Design" class="tab-img" />
-              </div>
-              <div class="tab-content-right">
-                <h1 class="tab-heading">UI UX Design</h1>
-                <p class="paragraph">
-                  This course UX & UI Design is designed for those people, who
-                  wants to design anything to keep users on first priority and
-                  working on to make them happy.
-                </p>
-              </div>
-            </div>
-            <div class="tab-item app-development">
-              <div class="tab-content-left">
-                <h1 class="tab-heading">App Development</h1>
-                <p class="paragraph">
-                  With the world going mobile, the importance of apps is
-                  increasing by the day. App development hence refers to the
-                  creation of applications to be used on mobile devices.
-                </p>
-              </div>
-              <div class="tab-content-right">
-                <img src="img/abtus1.jpg" alt="UI/UX Design" class="tab-img" />
+              <div class="tab-item app-development">
+                <div class="tab-content-left">
+                  <h1 class="tab-heading">VNEST Faculty Members</h1>
+                  <p class="paragraph">
+                    the faculty members are the pillars of knowledge and support, enriching the entrepreneurial journey with their expertise. With a diverse range of backgrounds and specialties, they mentor and empower students, fostering a culture of innovation and growth. Their dedication and guidance fuel the success of VNEST
+                  </p>
+                </div>
+                <div class="tab-content-right">
+                  <img
+                    src="images/app development.png"
+                    alt="UI/UX Design"
+                    class="tab-img"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="slide-container swiper">
-    <div class="slide-content">
-      <h1 style="text-align: center; margin-bottom: 50px">Management</h1>
-      <div class="card5-wrapper swiper-wrapper">
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
+    <div class="slide-container swiper">
+      <div class="slide-content">
+        <h1 style="text-align: center; margin-bottom: 50px">Management</h1>
+        <div class="card5-wrapper swiper-wrapper">
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
 
-            <div class="card5-image">
-              <img src="img/abtus1.jpg" alt="" class="card5-img" />
+              <div class="card5-image">
+                <img
+                  src="C:\Users\mohit\Desktop\Web dev\Dr.Sasikumar-M.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
             </div>
           </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
+              <div class="card5-image">
+                <!--<img src="images/profile2.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
 
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
 
-            <div class="card5-image">
-              <!--<img src="images/profile2.jpg" alt="" class="card5-img">-->
             </div>
           </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
+              <div class="card5-image">
+                <!--<img src="images/profile3.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
 
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
 
-            <div class="card5-image">
-              <!--<img src="images/profile3.jpg" alt="" class="card5-img">-->
             </div>
           </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
+              <div class="card5-image">
+                <!--<img src="images/profile4.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
 
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
 
-            <div class="card5-image">
-              <!--<img src="images/profile4.jpg" alt="" class="card5-img">-->
+
             </div>
           </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
+              <div class="card5-image">
+                <!--<img src="images/profile5.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
 
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
 
-            <div class="card5-image">
-              <!--<img src="images/profile5.jpg" alt="" class="card5-img">-->
+              <button class="button">View More</button>
             </div>
           </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
+              <div class="card5-image">
+                <!--<img src="images/profile6.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
 
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
 
-            <div class="card5-image">
-              <!--<img src="images/profile6.jpg" alt="" class="card5-img">-->
+              <button class="button">View More</button>
             </div>
           </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
+              <div class="card-image">
+                <!--<img src="images/profile7.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
 
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
 
-            <div class="card-image">
-              <!--<img src="images/profile7.jpg" alt="" class="card5-img">-->
+              <button class="button">View More</button>
             </div>
           </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
+              <div class="card5-image">
+                <!--<img src="images/profile8.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
 
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
 
-            <div class="card5-image">
-              <!--<img src="images/profile8.jpg" alt="" class="card5-img">-->
+              <button class="button">View More</button>
             </div>
           </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <img src="img/abtus1.jpg" alt="" class="card5-img" />
+              <div class="card5-image">
+                <img
+                  src="C:\Users\mohit\Desktop\Web dev\Dr.Sasikumar-M.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
             </div>
-          </div>
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
 
-            <button class="button">View More</button>
+              <button class="button">View More</button>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="slide-container swiper">
+      <div class="slide-content">
+        <h1 style="text-align: center; margin-bottom: 50px">
+          Board of Directors
+        </h1>
+        <div class="card5-wrapper swiper-wrapper">
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="C:\Users\mohit\Desktop\Web dev\Dr.Sasikumar-M.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <!--<img src="images/profile2.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <!--<img src="images/profile3.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <!--<img src="images/profile4.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <!--<img src="images/profile5.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <!--<img src="images/profile6.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <!--<img src="images/profile7.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <!--<img src="images/profile8.jpg" alt="" class="card5-img">-->
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="C:\Users\mohit\Desktop\Web dev\Dr.Sasikumar-M.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="slide-container swiper">
+      <div class="slide-content">
+        <h1 style="text-align: center; margin-bottom: 50px">
+          VNEST Faculty members
+        </h1>
+        <div class="card5-wrapper swiper-wrapper">
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img1.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Sasi Kumar M</h2>
+              <p class="description">
+                Director – V-NEST
+                Professor , SMEC
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                src = "img2.jpg"
+                alt=""
+                class="card5-img"
+              />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Ravi V</h2>
+              <p style = "margin:5px;" class="description">
+                Assistant Director – V-NEST<br>
+                Associate Professor, SENSE
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img src="img3.jpg" alt="" class="card5-img">
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Sumathi G N</h2>
+              <p class="description">
+                Professor, VITBS
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img src="img4.jpg" alt="" class="card5-img">
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr.Umayal C</h2>
+              <p class="description">
+                Professor,SELECT
+              </p>
+
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img src="img5.jpg" alt="" class="card5-img">
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Vasugi V</h2>
+              <p class="description">
+                Professor, SCE
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img src="img6.jpeg" alt="" class="card5-img">
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Balaji J</h2>
+              <p class="description">
+                Associate Professor, VITBS
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img src = "img7.jpg" alt="" class="card5-img">
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Anusha
+                </h2>
+              <p class="description">
+                Associate Professor, SCOPE
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img src="img8.jpg" alt="" class="card5-img">
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Jayanthi R</h2>
+              <p class="description">
+                Associate Professor,SCOPE
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img9.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Milind Shrinivas Dangate</h2>
+              <p class="description">
+                Associate Professor, SAS
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img11.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Saurav Gupta</h2>
+              <p class="description">
+                Assistant Professor, SENSE
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img12.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Rahul Narasimhan A</h2>
+              <p class="description">
+                Assistant Professor, SENSE
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img13.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Rishikeshan C A</h2>
+              <p class="description">
+                Assistant Professor, SCOPE
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img14.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Prof. Vinusowndarya S</h2>
+              <p class="description">
+                Assistant Professor, VFIT
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img15.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Balakrishnan R</h2>
+              <p class="description">
+                Assistant Professor, SENSE
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img16.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Bhisham Kumar Dhurandher</h2>
+              <p class="description">
+                Assistant Professor, SMEC
+              </p>
+            </div>
+          </div><div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img17.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Gajanand Gupta</h2>
+              <p class="description">
+                Assistant Professor, SMEC
+              </p>
+            </div>
+          </div><div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img18.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Noel Jeygar Robert V</h2>
+              <p class="description">
+                Assistant Professor, SCOPE
+              </p>
+            </div>
+          </div><div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img19.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Sivakumar P</h2>
+              <p class="description">
+                Assistant Professor, SCOPE
+              </p>
+            </div>
+          </div><div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img20.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Anubha Pearline S</h2>
+              <p class="description">
+                Assistant Professor, SCOPE
+              </p>
+            </div>
+          </div><div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img21.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. V. Premanand</h2>
+              <p class="description">
+                Assistant Professor, SCOPE
+              </p>
+            </div>
+          </div><div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img22.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Prof. Kaviya Elakkiya M</h2>
+              <p class="description">
+                Assistant Professor, SCOPE
+              </p>
+            </div>
+          </div><div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img23.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Padmanaban R</h2>
+              <p class="description">
+                Assistant Professor, SCOPE
+              </p>
+            </div>
+          </div><div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img24.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Valarmathi K</h2>
+              <p class="description">
+                Assistant Professor, SCOPE
+              </p>
+            </div>
+          </div><div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img25.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Santosh G</h2>
+              <p class="description">
+                Assistant Professor, SAS
+              </p>
+            </div>
+          </div><div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img26.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Jaisree Karthiga R K</h2>
+              <p class="description">
+                Assistant Professor, SSL
+              </p>
+            </div>
+          </div><div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img27.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Prof S. Aditya</h2>
+              <p class="description">
+                Assistant Professor, VITSOL
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img28.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr. Chitra Devi N</h2>
+              <p class="description">
+                Assistant Professor, VITBS
+              </p>
+            </div>
+          </div>
+          <div class="card5 swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card5-image">
+                <img
+                  src="img28.jpg"
+                  alt=""
+                  class="card5-img"
+                />
+              </div>
+            </div>
+
+            <div class="card5-content">
+              <h2 class="name">Dr.J.Uma Maheswari</h2>
+              <p class="description">
+                Assistant Professor, SCOPE
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+      <div class="swiper-pagination"></div>
     </div>
 
-    <div class="swiper-button-next swiper-navBtn"></div>
-    <div class="swiper-button-prev swiper-navBtn"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-  <div class="slide-container swiper">
-    <div class="slide-content">
-      <h1 style="text-align: center; margin-bottom: 50px">
-        Board of Directors
+
+    <div class="parent-container6">
+      <h1 style="font-size: 30px; text-align: center; margin-top: 30px">
+        Our Focus Areas
       </h1>
-      <div class="card5-wrapper swiper-wrapper">
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
+      <div class="container2">
+        <div class="card2__container2">
+          <article class="card2__article2">
+            <img
+              src="pexels-connor-danylenko-2962775.jpg"
+              alt="image"
+              class="card2__img2"
+            />
 
-            <div class="card5-image">
-              <img src="img/basketball.png" alt="" class="card5-img" />
+            <div class="card2__data2">
+              <span style = "font-size: 15px;"class="card2__description2"
+                >Embracing the realms of Life Sciences, our focus spans Agri-Tech, Med-Tech, Bio-Energy, Bio-Pharma, Bio-Services, and Bio-Industrial domains. </span
+              >
             </div>
-          </div>
+          </article>
+          <article class="card2__article2">
+            <img
+              src="pexels-connor-danylenko-2962775.jpg"
+              alt="image"
+              class="card2__img2"
+            />
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <!--<img src="images/profile2.jpg" alt="" class="card5-img">-->
+            <div class="card2__data2">
+              <span style = "font-size: 15px;" class="card2__description2"
+                >In the landscape of Industry 4.0, we delve into AR/VR, System Integration, Simulation, Big Data, Autonomous Robots, Cloud Computing, and IoT. </span
+              >
             </div>
-          </div>
+          </article>
+          <article class="card2__article2">
+            <img
+              src="pexels-connor-danylenko-2962775.jpg"
+              alt="image"
+              class="card2__img2"
+            />
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <!--<img src="images/profile3.jpg" alt="" class="card5-img">-->
+            <div class="card2__data2">
+              <span style = "font-size: 14px;" class="card2__description2"
+                >For Smart & Clean Mobility, our exploration extends to Drone Technology, Smart & Non-Fossil Fuel Vehicles, Electric Vehicles, EV Battery Management, and Autonomous Navigation.</span
+              >
             </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <!--<img src="images/profile4.jpg" alt="" class="card5-img">-->
-            </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <!--<img src="images/profile5.jpg" alt="" class="card5-img">-->
-            </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <!--<img src="images/profile6.jpg" alt="" class="card5-img">-->
-            </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card-image">
-              <!--<img src="images/profile7.jpg" alt="" class="card5-img">-->
-            </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <!--<img src="images/profile8.jpg" alt="" class="card5-img">-->
-            </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <img src="img/abtus1.jpg" alt="" class="card5-img" />
-            </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
+          </article>
         </div>
       </div>
     </div>
-
-    <div class="swiper-button-next swiper-navBtn"></div>
-    <div class="swiper-button-prev swiper-navBtn"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-  <div class="slide-container swiper">
-    <div class="slide-content">
-      <h1 style="text-align: center; margin-bottom: 50px">
-        VNEST Faculty members
-      </h1>
-      <div class="card5-wrapper swiper-wrapper">
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <img src="img/abtus1.jpg" alt="" class="card5-img" />
+    <footer>
+      <div class="container1">
+        <div class="row1">
+          <div class="footer-col">
+            <div class="footer-col-links">
+              <h2>Useful Links</h2>
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact US</a></li>
+                <li><a href="">Facilities</a></li>
+                <li><a href="">Incubation</a></li>
+                <li><a href="">Schemes</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Career</a></li>
+              </ul>
             </div>
           </div>
 
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
+          <div class="footer-col">
+            <div class="footer-col-contact">
+              <h2>Contact Us</h2>
+              <ul>
+                <li>
+                  <a href=""
+                    ><i class="fa-solid fa-envelope"></i
+                    >&nbsp;&nbsp;director.vnest@vit.ac.in</a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><i class="fa-solid fa-phone"></i
+                    >&nbsp;&nbsp;044-039931143</a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Vellore
+                    Institute of Technology<br />&nbsp;
+                    &nbsp;&nbsp;&nbsp;Vandalur <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelambakkam Road<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp; Chennai 600 127</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <button class="button">View More</button>
+          <div class="footer-col">
+            <div class="footer-col-newsletter">
+              <h2>Newsletter</h2>
+              <form action="">
+                <input type="text" placeholder="Your Name" class="inputName" />
+                <input
+                  type="email"
+                  placeholder="Enter Company Email"
+                  class="inputEmail"
+                />
+                <input type="submit" value="Submit" class="inputSubmit" />
+              </form>
+            </div>
           </div>
         </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
+        <hr />
+        <div class="row2">
+          <div class="col">
+            <p>&#169; Made by . All Rights Reserved.</p>
+          </div>
 
-            <div class="card5-image">
-              <!--<img src="images/profile2.jpg" alt="" class="card5-img">-->
+          <div class="wrapper0">
+            <div class="button1">
+              <div class="icon">
+                <i class="fa fa-facebook-f"></i>
+              </div>
+              <span>Facebook&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <!--<img src="images/profile3.jpg" alt="" class="card5-img">-->
+            <div class="button1">
+              <div class="icon">
+                <i class="fa fa-twitter"></i>
+              </div>
+              <span>Twitter&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <!--<img src="images/profile4.jpg" alt="" class="card5-img">-->
+            <div class="button1">
+              <div class="icon">
+                <i class="fa fa-instagram"></i>
+              </div>
+              <span>Instagram&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <!--<img src="images/profile5.jpg" alt="" class="card5-img">-->
+            <div class="button1">
+              <div class="icon">
+                <i class="fa fa-youtube"></i>
+              </div>
+              <span> YouTube&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <!--<img src="images/profile6.jpg" alt="" class="card5-img">-->
-            </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card-image">
-              <!--<img src="images/profile7.jpg" alt="" class="card5-img">-->
-            </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <!--<img src="images/profile8.jpg" alt="" class="card5-img">-->
-            </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
-          </div>
-        </div>
-        <div class="card5 swiper-slide">
-          <div class="image-content">
-            <span class="overlay"></span>
-
-            <div class="card5-image">
-              <img src="img/abtus1.jpg" alt="" class="card5-img" />
-            </div>
-          </div>
-
-          <div class="card5-content">
-            <h2 class="name">David Dell</h2>
-            <p class="description">
-              The lorem text the section that contains header with having open
-              functionality. Lorem dolor sit amet consectetur adipisicing
-              elit.
-            </p>
-
-            <button class="button">View More</button>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
+    <script>
+      const scrollers = document.querySelectorAll(".scroller");
 
-    <div class="swiper-button-next swiper-navBtn"></div>
-    <div class="swiper-button-prev swiper-navBtn"></div>
-    <div class="swiper-pagination"></div>
-  </div>
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        scrollers.forEach((scroller) => {
+          scroller.setAttribute("data-animated", true);
 
-  <h1 style="text-align: center; font-size: 30px; margin: 30px">
-    Our Mentors
-  </h1>
-  <div class="parent-container5">
-    <div class="child-container9">
-      <div class="card2">
-        <img src="img/abtus1.jpg" />
-        <h5>Market Research Analyst</h5>
-        <h4>Stephen Brown</h4>
-      </div>
-    </div>
-    <div class="child-container10">
-      <div class="card2">
-        <img src="img/abtus1.jpg" />
-        <h5>Market Research Analyst</h5>
-        <h4>Stephen Brown</h4>
-      </div>
-    </div>
-    <div class="child-container11">
-      <div class="card2">
-        <img src="img/abtus1.jpg" />
-        <h5>Market Research Analyst</h5>
-        <h4>Stephen Brown</h4>
-      </div>
-    </div>
-  </div>
-  <div class="parent-container6">
-    <h1 style="font-size: 30px; text-align: center; margin-top: 30px">
-      Our Focus Areas
-    </h1>
-    <div class="container2">
-      <div class="card2__container2">
-        <article class="card2__article2">
-          <img src="img/bmw.png" alt="image" class="card2__img2" />
+          const scrollerInner = scroller.querySelector(".scroller__inner");
 
-          <div class="card2__data2">
-            <span class="card2__description2">Vancouver Mountains, Canada</span>
-            <h2 class="card2__title2">The Great Path</h2>
-          </div>
-        </article>
-        <article class="card2__article2">
-          <img src="img/bmw.png" alt="image" class="card2__img2" />
-
-          <div class="card2__data2">
-            <span class="card2__description2">Vancouver Mountains, Canada</span>
-            <h2 class="card2__title2">The Great Path</h2>
-          </div>
-        </article>
-        <article class="card2__article2">
-          <img src="img/bmw.png" alt="image" class="card2__img2" />
-
-          <div class="card2__data2">
-            <span class="card2__description2">Vancouver Mountains, Canada</span>
-            <h2 class="card2__title2">The Great Path</h2>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="container1">
-      <div class="row1">
-        <div class="footer-col">
-          <div class="footer-col-links">
-            <h2>Useful Links</h2>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-                            <li><a href="aboutus.html">About</a></li>
-                            <li><a href="contact.html">Contact US</a></li>
-                            <li><a href="facilities.html">Facilities</a></li>
-                            <li><a href="incubation.html">Incubation</a></li>
-                            <li><a href="">Schemes</a></li>
-                            <li><a href="">Gallery</a></li>
-                            <li><a href="career.html">Career</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <div class="footer-col-contact">
-            <h2>Contact Us</h2>
-            <ul>
-              <li>
-                <a href=""><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;director.vnest@vit.ac.in</a>
-              </li>
-              <li>
-                <a href=""><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;044-039931143</a>
-              </li>
-              <li>
-                <a href=""><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Vellore
-                  Institute of Technology<br />&nbsp;
-                  &nbsp;&nbsp;&nbsp;Vandalur <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelambakkam Road<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; Chennai 600 127</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <div class="footer-col-newsletter">
-            <h2>Newsletter</h2>
-            <form action="">
-              <input type="text" placeholder="Your Name" class="inputName" />
-              <input type="email" placeholder="Enter Company Email" class="inputEmail" />
-              <input type="submit" value="Submit" class="inputSubmit" />
-            </form>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <div class="row2">
-        <div class="col">
-          <p>&#169; Made by . All Rights Reserved.</p>
-        </div>
-
-        <div class="wrapper0">
-          <div class="button1">
-            <div class="icon">
-              <i class="fa fa-facebook-f"></i>
-            </div>
-            <span>Facebook&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          </div>
-          <div class="button1">
-            <div class="icon">
-              <i class="fa fa-twitter"></i>
-            </div>
-            <span>Twitter&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          </div>
-          <div class="button1">
-            <div class="icon">
-              <i class="fa fa-instagram"></i>
-            </div>
-            <span>Instagram&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          </div>
-          <div class="button1">
-            <div class="icon">
-              <i class="fa fa-youtube"></i>
-            </div>
-            <span> YouTube&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script>
-    const scrollers = document.querySelectorAll(".scroller");
-
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      scrollers.forEach((scroller) => {
-        scroller.setAttribute("data-animated", true);
-
-        const scrollerInner = scroller.querySelector(".scroller__inner");
-
-        Array.from(scrollerInner.children).forEach((item) => {
-          const duplicatedItem = item.cloneNode(true);
-          duplicatedItem.setAttribute("aria-hidden", true);
-          scrollerInner.appendChild(duplicatedItem);
+          Array.from(scrollerInner.children).forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+          });
         });
-      });
-    }
-  </script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script>
-    let filter_btn = document.querySelectorAll(".filter-btn");
-    let tab_items = document.querySelectorAll(".tab-item");
+      }
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      let filter_btn = document.querySelectorAll(".filter-btn");
+      let tab_items = document.querySelectorAll(".tab-item");
 
-    for (let i = 0; i < filter_btn.length; i++) {
-      filter_btn[i].addEventListener("click", function () {
-        for (let j = 0; j < filter_btn.length; j++) {
-          filter_btn[j].classList.remove("active");
-        }
-        let select_tab = filter_btn[i].getAttribute("data-tab");
-        filter_btn[i].classList.add("active");
-        for (let t = 0; t < tab_items.length; t++) {
-          document.querySelector(".tab-filter-item-container").style.height =
-            tab_items[t].scrollHeight + "px";
-          if (tab_items[t].classList.contains(select_tab)) {
-            tab_items[t].classList.add("select_tab");
-          } else {
-            tab_items[t].classList.remove("select_tab");
+      for (let i = 0; i < filter_btn.length; i++) {
+        filter_btn[i].addEventListener("click", function () {
+          for (let j = 0; j < filter_btn.length; j++) {
+            filter_btn[j].classList.remove("active");
           }
-        }
-      });
-    }
-
-    for (let th = 0; th < tab_items.length; th++) {
-      document.querySelector(".tab-filter-item-container").style.height =
-        tab_items[th].scrollHeight + "px";
-    }
-  </script>
-  <script>
-    const wrapper1 = document.querySelector(".wrapper1");
-    const carousel = document.querySelector(".carousel");
-    const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-    const arrowBtns = document.querySelectorAll(".wrapper1 i");
-    const carouselChildrens = [...carousel.children];
-
-    let isDragging = false,
-      isAutoPlay = true,
-      startX,
-      startScrollLeft,
-      timeoutId;
-    let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-    carouselChildrens
-      .slice(-cardPerView)
-      .reverse()
-      .forEach((card) => {
-        carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-      });
-    carouselChildrens.slice(0, cardPerView).forEach((card) => {
-      carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-    });
-    carousel.classList.add("no-transition");
-    carousel.scrollLeft = carousel.offsetWidth;
-    carousel.classList.remove("no-transition");
-
-    arrowBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        carousel.scrollLeft +=
-          btn.id == "left" ? -firstCardWidth : firstCardWidth;
-      });
-    });
-
-    const dragStart = (e) => {
-      isDragging = true;
-      carousel.classList.add("dragging");
-      startX = e.pageX;
-      startScrollLeft = carousel.scrollLeft;
-    };
-
-    const dragging = (e) => {
-      if (!isDragging) return;
-      carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-    };
-
-    const dragStop = () => {
-      isDragging = false;
-      carousel.classList.remove("dragging");
-    };
-
-    const infiniteScroll = () => {
-      if (carousel.scrollLeft === 0) {
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
-      } else if (
-        Math.ceil(carousel.scrollLeft) ===
-        carousel.scrollWidth - carousel.offsetWidth
-      ) {
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
+          let select_tab = filter_btn[i].getAttribute("data-tab");
+          filter_btn[i].classList.add("active");
+          for (let t = 0; t < tab_items.length; t++) {
+            document.querySelector(".tab-filter-item-container").style.height =
+              tab_items[t].scrollHeight + "px";
+            if (tab_items[t].classList.contains(select_tab)) {
+              tab_items[t].classList.add("select_tab");
+            } else {
+              tab_items[t].classList.remove("select_tab");
+            }
+          }
+        });
       }
 
-      clearTimeout(timeoutId);
-      if (!wrappe1r.matches(":hover")) autoPlay();
-    };
+      for (let th = 0; th < tab_items.length; th++) {
+        document.querySelector(".tab-filter-item-container").style.height =
+          tab_items[th].scrollHeight + "px";
+      }
+    </script>
+    <script>
+      const wrapper1 = document.querySelector(".wrapper1");
+      const carousel = document.querySelector(".carousel");
+      const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+      const arrowBtns = document.querySelectorAll(".wrapper1 i");
+      const carouselChildrens = [...carousel.children];
 
-    const autoPlay = () => {
-      if (window.innerWidth < 800 || !isAutoPlay) return;
-      timeoutId = setTimeout(
-        () => (carousel.scrollLeft += firstCardWidth),
-        2500
-      );
-    };
-    autoPlay();
+      let isDragging = false,
+        isAutoPlay = true,
+        startX,
+        startScrollLeft,
+        timeoutId;
+      let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+      carouselChildrens
+        .slice(-cardPerView)
+        .reverse()
+        .forEach((card) => {
+          carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+        });
+      carouselChildrens.slice(0, cardPerView).forEach((card) => {
+        carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+      });
+      carousel.classList.add("no-transition");
+      carousel.scrollLeft = carousel.offsetWidth;
+      carousel.classList.remove("no-transition");
 
-    carousel.addEventListener("mousedown", dragStart);
-    carousel.addEventListener("mousemove", dragging);
-    document.addEventListener("mouseup", dragStop);
-    carousel.addEventListener("scroll", infiniteScroll);
-    wrapper1.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-    wrapper1.addEventListener("mouseleave", autoPlay);
-  </script>
-  <script src="swiper-bundle.min.js"></script>
+      arrowBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          carousel.scrollLeft +=
+            btn.id == "left" ? -firstCardWidth : firstCardWidth;
+        });
+      });
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
-  <script>
-    var navLinks = document.getElementById("navLinks");
+      const dragStart = (e) => {
+        isDragging = true;
+        carousel.classList.add("dragging");
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+      };
 
-    function showMenu() {
-      navLinks.style.right = "0";
-    }
+      const dragging = (e) => {
+        if (!isDragging) return;
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+      };
 
-    function hideMenu() {
-      navLinks.style.right = "-200px";
-    }
-  </script>
-</body>
+      const dragStop = () => {
+        isDragging = false;
+        carousel.classList.remove("dragging");
+      };
 
+      const infiniteScroll = () => {
+        if (carousel.scrollLeft === 0) {
+          carousel.classList.add("no-transition");
+          carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
+          carousel.classList.remove("no-transition");
+        } else if (
+          Math.ceil(carousel.scrollLeft) ===
+          carousel.scrollWidth - carousel.offsetWidth
+        ) {
+          carousel.classList.add("no-transition");
+          carousel.scrollLeft = carousel.offsetWidth;
+          carousel.classList.remove("no-transition");
+        }
+
+        clearTimeout(timeoutId);
+        if (!wrappe1r.matches(":hover")) autoPlay();
+      };
+
+      const autoPlay = () => {
+        if (window.innerWidth < 800 || !isAutoPlay) return;
+        timeoutId = setTimeout(
+          () => (carousel.scrollLeft += firstCardWidth),
+          2500
+        );
+      };
+      autoPlay();
+
+      carousel.addEventListener("mousedown", dragStart);
+      carousel.addEventListener("mousemove", dragging);
+      document.addEventListener("mouseup", dragStop);
+      carousel.addEventListener("scroll", infiniteScroll);
+      wrapper1.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+      wrapper1.addEventListener("mouseleave", autoPlay);
+    </script>
+    <script src="swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+        <script>
+          var navLinks = document.getElementById("navLinks");
+  
+          function showMenu() {
+              navLinks.style.right = "0";
+  
+          }
+  
+          function hideMenu() {
+              navLinks.style.right = "-200px";
+  
+          }
+      </script>
+  </body>
 </html>
