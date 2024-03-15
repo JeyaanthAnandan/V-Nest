@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-.blue{
+.navColor{
     background-color:purple;
 }
 
@@ -54,7 +54,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    min-height: 250px;
+    min-height: 200px;
 
     /* Added css */
     overflow: hidden;
