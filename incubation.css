@@ -6,7 +6,7 @@
 
 }
 
-.bodyClass{
+.body{
     background-color:#f6f3ff
 }
 
@@ -113,7 +113,8 @@ nav img{
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon{
-    background-color: #CBC3E3;
+    background-color: black;
+    width: 142px;
 }   
 
 
@@ -159,6 +160,7 @@ nav img{
 }
 
 .logoName{
+    text-align: center;
     width: 45%;
     height: 100%;
     background-color: black;
@@ -170,6 +172,7 @@ nav img{
     top: 0px;
     border-radius: 7px;
     box-shadow:3px 3px 2px  ;
+    
 }
 
 .img-logo{
@@ -181,19 +184,19 @@ nav img{
 
 .img-logo:hover {
     /* Apply styles when the image is hovered */
-    transform: scale(1.1); /* Increase the size by 10% */
+    transform: scale(1.07); /* Increase the size by 10% */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Add a subtle drop shadow */
     /* transition: transform 0.4s ease; Add a smooth transition effect */
 }
 
 .name-logo{
-        padding-left: 27%;
+        text-align: center;
+        /* padding-left: 27%; */
         position: absolute;
         top: 53%;
         color: #CBC3E3;
         transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
-
 
 
 .carousel-item{    /*change*/
@@ -253,12 +256,13 @@ nav img{
 }
 
 .carousel-item img{     /*change*/
-    width: 79%;
+    width: 76%;
     object-fit: contain;
-    margin-left: -32%;
+    margin-left: -27%;
     position: absolute;
     top: 8%;
-    padding-left: 5% ;
+    padding-left: 0%;
+    border-radius: 5px;
 }
 
 .carousel-item:hover img{     /*change*/
