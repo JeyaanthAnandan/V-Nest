@@ -14,13 +14,14 @@
 }
 
 .header{
-    min-height: 31vh;
+    min-height: 145px;
     width: 100%;
     background-position: center;
     background-size: cover;
     position: relative;
     /* background-color: purple; */
-    background-color: black;
+    background-color: purple;
+    padding-top: 2%;
     
 }
 
