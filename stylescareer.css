@@ -5,10 +5,13 @@
 
 }
 
+.main{
+    
+    background-color: #f7f8fc;
+}
 .header{
     min-height: 30vh;
     width: 100%;
-    background-color: #CBC3E3;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -20,9 +23,28 @@ nav{
     align-items: center;
 }
 
+.navColor{
+    background-color:purple;
+}
+
 nav img{
     width: 150px;
 
+}
+
+.heading{
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    background-color: #f7f8fc;
+    /* font-family: "Roboto", sans-serif; */
+    color: #10182f;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+.heading h1{
+    font-size: 36px;
 }
 
 .nav-links{
@@ -142,14 +164,15 @@ nav .fa{
 }
 .main .message{
     width:60%;
-    height: 50%;
+    height: 70%;
     background-color: rgba(128, 0, 128, 0.116);
     color : rgb(92, 3, 92) ;
     font-size:130%;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    
+    text-align: center;
+    flex-direction: column;
 }
 
 footer .container{
