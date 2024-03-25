@@ -55,9 +55,28 @@ nav img{
     transition: 0.5s;
 }
 
+.heading{
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    /* background-color: #f7f8fc; */
+    /* font-family: "Roboto", sans-serif; */
+    color: #10182f;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+.heading h1{
+    font-size: 36px;
+}
+
 .nav-links ul li:hover::after{
     width: 100%;
 
+}
+
+.navColor{
+    background-color:purple;
 }
 
 nav .fa{
@@ -95,6 +114,8 @@ nav .fa{
     font-size: 14px;
     color: #fff;
 }
+
+
 
 @media(max-width: 700px){
     .body{
@@ -176,6 +197,12 @@ nav .fa{
     justify-content: center;
     box-sizing:border-box ;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    background-color: #f7f8fc;
+
+}
+.contact{
+    background-color: #f7f8fc;
+
 }
 
 .page .map{
@@ -580,12 +607,10 @@ footer .container{
         width: 90%;
     }
     .contact{
-        height:1000px;
         display: block;
         margin-left: 20px;
     }
     .page{
-        height: 1000px;
         display:block;
         flex-direction: column;
         margin-left: 100px;
@@ -603,6 +628,15 @@ footer .container{
       order: 2;
     }
     
+    .page{
+        flex-direction: column;
+        height: 150vh;
+    }
+
+    .page .map{
+        width:90vw;
+        height: 480px;
+    }
     /* Add some margin below the form to separate it from the map */
     /* .form {
       margin-bottom: 20px;
@@ -666,5 +700,8 @@ footer .container{
         padding-top: 20px;
     }
 
-    
+    .map{
+        width:90%;
+        background-color: #1DA1F2;
+    }
   }
